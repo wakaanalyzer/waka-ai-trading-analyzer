@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waka AI Trading Analyzer</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="header">
+<h1>🤖 Waka AI Trading Analyzer</h1>
+<p>AI Powered Market Analysis Dashboard</p>
+</header>
+
+<div class="container">
+<div class="card">
+<h2>Select Market</h2>
+<select id="market">
+<option>Volatility 10 (1s)</option>
+<option>Volatility 25 (1s)</option>
+<option>Volatility 50 (1s)</option>
+<option>Volatility 75 (1s)</option>
+<option>Volatility 100 (1s)</option>
+</select>
+<button id="connectBtn">Connect Market</button>
+</div>
+
+<div class="card center">
+<h2>Current Digit</h2>
+<div id="digit" class="digit">-</div>
+<div id="price" class="price">Waiting...</div>
+</div>
+
+<div class="card">
+<h2>AI Recommendation</h2>
+<h1 id="signal">WAIT</h1>
+<p id="confidence">Confidence: 0%</p>
+</div>
+
+<div class="card">
+<h2>Digit Distribution</h2>
+<canvas id="digitChart"></canvas>
+</div>
+
+<div class="card">
+<h2>Even / Odd Analysis</h2>
+<div class="progress"><div id="evenBar" class="evenBar">Even 50%</div></div>
+<div class="progress"><div id="oddBar" class="oddBar">Odd 50%</div></div>
+</div>
+
+<div class="card">
+<h2>Recent Digits</h2>
+<div id="history" class="history"></div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
